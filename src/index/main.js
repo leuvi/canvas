@@ -21,12 +21,12 @@ function demo1() {
   var ctx = canvas.getContext('2d')
   var curMouse = mouse(canvas)
   var ball = new Ball()
-  var vx = Math.random() * 10 - 5
-  var vy = -10
-  var bounce = -0.7
-  var gravity = 0.5
-  var friction = .99
-  var wind = 0
+  var vx = Math.random() * 10 - 5  //x轴速度向量
+  var vy = -10                     //y轴速度向量
+  var bounce = -0.7                //反弹系数
+  var gravity = 0.5                //重力
+  var friction = .99               //摩擦力
+  var wind = 0.02                  //风力
   var isMouseDown = false
   var oldX
   var oldY
@@ -39,6 +39,8 @@ function demo1() {
       text.innerHTML = '当前西风：风速' + Math.abs(wind * 100)
     }
   }
+
+  button.click()
 
   west.onclick = function() {
     if(wind < 0) {
